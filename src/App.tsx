@@ -5,7 +5,7 @@ import * as ServiceWorkerRegistration from './serviceWorkerRegistration';
 ServiceWorkerRegistration.register();
 
 const App: FC = function () {
-  return <Routes />;
+  return <Routes />
 };
 
 export default App;
