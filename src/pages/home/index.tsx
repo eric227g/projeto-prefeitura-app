@@ -1,21 +1,11 @@
 import { Header } from 'pages/header';
 import { View, Image } from 'react-native';
-import {
-  Manut_Vias,
-  Manut_Parque,
-  Energia,
-  Anvisa,
-  Ideia,
-  Water,
-  Sugestao,
-  StyleText,
-  StyleTextLeft,
-} from './style';
+import { Manut_Vias, Manut_Parque, Energia, Anvisa, Ideia, Water, Sugestao, StyleText, StyleTextLeft } from './style';
 
 export default function Home() {
   return (
     <View>
-      <Header report='Tela de Relatos' walcome='Bem vindo, Gabriel'/>
+      <Header report="Tela de Relatos" walcome="Bem vindo, Gabriel" />
       <View>
         <Manut_Vias>
           <Image source={require('../../imagens/buraco.png')} />
