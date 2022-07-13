@@ -33,7 +33,7 @@ export const User = styled.Text`
   margin-left: 25px;
   margin-top: 12px;
   margin-bottom: 24px;
-  color: #2743FD;
+  color: #808080;
   width: 315px;
   border-Bottom-Color: #A6A6A6;
   border-Bottom-Width: 1px;
