@@ -53,7 +53,7 @@ export const TextEnviar = styled.Text`
 
 export const Container = styled.View`
   display: flex;
-  margin-top: 70%;
+  margin-top: 10%;
   padding-left: 26px;
 `;
 export default styled;

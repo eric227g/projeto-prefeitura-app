@@ -67,3 +67,12 @@ export const StyleTextLeft = styled.Text`
   font-size: 15px;
   font-weight: 700;
 `;
+
+export const ImageHome = styled.Image`
+width: 100px;
+height:100px;
+`
+export const ImageLogo = styled.Image`
+width: 155px;
+height: 143px;
+`
