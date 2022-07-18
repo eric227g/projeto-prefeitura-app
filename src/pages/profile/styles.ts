@@ -1,11 +1,15 @@
 import styled from 'styled-components/native';
 
 export const BackgroundPurple = styled.Image`
-  margin-left: 52%;
+  margin-left: 55%;
+  width: 193px;
+  height: 263px;
 `
 export const BackgroundBlue = styled.Image`
-  margin-left: 64%;
-  margin-top: -67%;
+  margin-left: 66%;
+  margin-top: -69%;
+  width: 141px;
+  height: 235px;
 `
 export const Prefile = styled.Text`
   font-size: 48px;

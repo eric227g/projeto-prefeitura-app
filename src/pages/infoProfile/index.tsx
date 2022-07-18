@@ -13,7 +13,7 @@ interface Props {
 
 export default function InfoProfile({nameUser,firstName,secundName,birthDate}: Props) {
   return(
-    <Container>
+      <Container>
         <Info>Nome de usuario</Info>
         <User>{nameUser}</User>
         <Info>Primeiro nome</Info>
