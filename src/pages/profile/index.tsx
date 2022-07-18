@@ -10,10 +10,12 @@ Icon
 } from './styles'
 import { SignOut } from 'phosphor-react-native';
 import InfoProfile from 'pages/infoProfile';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Profile() {
   return (
     <>
+    <ScrollView>
       <View>
         <BackgroundPurple source={require('../../imagens/Purple.png')} />
         <BackgroundBlue source={require('../../imagens/Blue.png')} />
@@ -26,6 +28,7 @@ export default function Profile() {
           <Sair>Sair</Sair>
           <Icon><SignOut color='#465EFF' /></Icon>
       </Button>
+      </ScrollView>
     </>
   );
 }

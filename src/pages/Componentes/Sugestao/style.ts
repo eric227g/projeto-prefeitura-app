@@ -16,7 +16,7 @@ export const TextFonte = styled.Text`
 
 export const Container = styled.View`
   display: flex;
-  margin-top: 70%;
+  margin-top: 10%;
   padding-left: 26px;
 `;
 
@@ -33,8 +33,9 @@ export const LogButtonEnvio = styled.TouchableOpacity`
   border-radius: 28px;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 70px;
+  margin-bottom: 40px;
 `;
 
 export const TextEnvio = styled.Text`
