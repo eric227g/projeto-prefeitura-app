@@ -11,7 +11,7 @@ export function Header({report, walcome}: {report: string, walcome?: string}) {
   return(
     <>
       <HeaderContainer>
-          <ImageLogo source={require('../../imagens/logo.png')} />
+          <ImageLogo source={require('../../imagens/logoteste.png')} />
           <Info>Cidadão informa</Info>
           <Walcome>{walcome}</Walcome>
           <Report>{report}</Report>
