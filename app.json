@@ -3,8 +3,29 @@
     "name": "my-app",
     "slug": "my-app",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1886C0"
+    },
+
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "ios": {
+      "supportsTablet": true
+      },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1886C0"
+      }
+
+    }
   }
 }
