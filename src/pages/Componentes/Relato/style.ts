@@ -47,8 +47,11 @@ export const TextFoto = styled.Text`
   font-size: 10px;
 `;
 
-export const TextEnviar = styled.Text`
+export const TextEnviar = styled.View`
   font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  color: #ffff;
 `;
 
 export const Container = styled.View`
@@ -56,4 +59,22 @@ export const Container = styled.View`
   margin-top: 10%;
   padding-left: 26px;
 `;
+
+export const ImageBackgroundShape = styled.ImageBackground`
+  display: flex;
+  border-radius: 28px;
+  /* width: 255px; */
+  width: 200px;
+  background-color: blue;
+  height: 38px;
+  justify-content: center;
+`;
+
+export const ViewContainer = styled.View`
+  flex: 1;
+  /* paddinghorizontal: 20; */
+  justify-content: 'center';
+  align-items: 'center';
+`;
+
 export default styled;
