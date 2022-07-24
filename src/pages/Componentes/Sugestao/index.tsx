@@ -10,11 +10,10 @@ import {
 import { Rating } from 'react-native-ratings';
 import { Header } from 'pages/header';
 import { ScrollView, View } from 'react-native';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { RFValue as RF } from 'react-native-responsive-fontsize';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { pt } from 'yup-locale-pt';
+import { ImageBackgroundShape } from '../Relato/style';
 
 Yup.setLocale(pt);
 
@@ -55,9 +54,11 @@ export default function ScreenSugestao() {
               />
             </RatingStar>
             <TextFonte>Escreva sua sugestão para prefeitura</TextFonte>
-            <TextFieldCampo placeholder="Colocar um componente de campo de texto" />
+            <TextFieldCampo placeholder="Campo de texto" />
             <LogButtonEnvio>
-              <TextEnvio>Enviar</TextEnvio>
+              <ImageBackgroundShape source={require('../../../imagens/ButtonColors.png')}>
+                <TextEnvio>Enviar</TextEnvio>
+              </ImageBackgroundShape>
             </LogButtonEnvio>
           </Container>
         </ViewContainerSugestao>

@@ -39,8 +39,21 @@ export const LogButtonEnvio = styled.TouchableOpacity`
   margin-bottom: 40px;
 `;
 
+export const ImageBackgroundShape = styled.ImageBackground`
+  display: flex;
+  border-radius: 28px;
+  /* width: 255px; */
+  width: 200px;
+  background-color: blue;
+  height: 38px;
+  justify-content: center;
+`;
+
 export const TextEnvio = styled.Text`
   font-size: 16px;
+  color: #ffff;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const ViewContainerSugestao = styled.View`
