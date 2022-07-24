@@ -69,10 +69,18 @@ export const StyleTextLeft = styled.Text`
 `;
 
 export const ImageHome = styled.Image`
-width: 100px;
-height:100px;
-`
+  width: 100px;
+  height: 100px;
+`;
 export const ImageLogo = styled.Image`
-width: 155px;
-height: 143px;
-`
+  width: 155px;
+  height: 143px;
+`;
+export const ViewContainer = styled.View`
+  flex: 1;
+  /* padding-horizontal: 20; */
+  justify-content: 'center';
+  align-items: 'center';
+`;
+
+export default styled;
