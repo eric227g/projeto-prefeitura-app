@@ -16,8 +16,9 @@ export const TextFonte = styled.Text`
 
 export const Container = styled.View`
   display: flex;
-  margin-top: 10%;
+  margin-top: 250px;
   padding-left: 26px;
+  justify-content: center;
 `;
 
 export const TextFieldCampo = styled.TextInput`
@@ -40,6 +41,14 @@ export const LogButtonEnvio = styled.TouchableOpacity`
 
 export const TextEnvio = styled.Text`
   font-size: 16px;
+`;
+
+export const ViewContainerSugestao = styled.View`
+  margin-top: 50px;
+  flex: 1;
+  /* padding-horizontal: 20; */
+  justify-content: 'center';
+  align-items: 'center';
 `;
 
 export default styled;
