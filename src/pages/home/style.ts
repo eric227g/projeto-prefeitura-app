@@ -6,6 +6,9 @@ export const Info = styled.Text`
   margin-top: -30%;
   font-size: 24px;
   font-weight: 600;
+  width: 200px;
+  height: 50px;
+  flex: 1;
 `;
 export const Walcome = styled.Text`
   color: white;
@@ -13,6 +16,9 @@ export const Walcome = styled.Text`
   margin-top: 5%;
   font-size: 24px;
   font-weight: 600;
+  width: 200px;
+  height: 50px;
+  flex: 1;
 `;
 export const Report = styled.Text`
   color: white;
@@ -20,6 +26,9 @@ export const Report = styled.Text`
   margin-top: 12%;
   font-size: 24px;
   font-weight: 600;
+  width: 200px;
+  height: 50px;
+  flex: 1;
 `;
 export const HeaderContainer = styled.View`
   width: 100%;
@@ -77,8 +86,7 @@ export const ImageLogo = styled.Image`
   height: 143px;
 `;
 export const ViewContainer = styled.View`
-  flex: 1;
-  /* padding-horizontal: 20; */
+  display: flex;
   justify-content: 'center';
   align-items: 'center';
 `;
