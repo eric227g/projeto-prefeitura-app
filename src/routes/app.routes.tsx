@@ -5,6 +5,7 @@ import Profile from '../pages/profile';
 import Registration from 'pages/registration';
 import ScreenRelato from 'pages/ScreenRelato';
 import SugestaoScreen from 'pages/ScreenSugestao';
+import StartScren from 'pages/startScren';
 
 const AppRoutes: FC<PropsGroup> = function ({ Drawer }: PropsGroup) {
   return (
@@ -12,6 +13,16 @@ const AppRoutes: FC<PropsGroup> = function ({ Drawer }: PropsGroup) {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Perfil" component={Profile} />
       <Drawer.Screen name="Registro" component={Registration} />
+      <Drawer.Screen
+      name="Tela Inicial"
+      component={StartScren}
+      options={{
+        headerShown: false,
+        gestureHandlerProps:{
+          enable: false,
+        },
+      }}
+      />
       <Drawer.Screen
         name="ScreenRelato"
         component={ScreenRelato}
