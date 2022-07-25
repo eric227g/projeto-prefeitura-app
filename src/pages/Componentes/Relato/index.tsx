@@ -6,10 +6,9 @@ import {
   Container,
   TextInputAdress,
   TextInputArea,
-  ImageBackgroundShape,
   ViewContainer,
 } from './style';
-import { TextInput, Text, View, StyleSheet, ImageBackground } from 'react-native';
+import { TextInput, Text, View, StyleSheet, ImageBackground, Image } from 'react-native';
 import { Header } from 'pages/header';
 
 export default function ScreenRelato() {
@@ -27,9 +26,7 @@ export default function ScreenRelato() {
             <TextFoto>Carregar foto</TextFoto>
           </LogButtonFoto>
           <LogButtonEnvio>
-            <ImageBackgroundShape source={require('../../../imagens/ButtonColors.png')}>
-              <TextEnviar>Enviar</TextEnviar>
-            </ImageBackgroundShape>
+            <TextEnviar>Enviar</TextEnviar>
           </LogButtonEnvio>
         </Container>
       </ViewContainer>

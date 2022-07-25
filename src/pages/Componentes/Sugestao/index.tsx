@@ -13,7 +13,6 @@ import { ScrollView, View } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { pt } from 'yup-locale-pt';
-import { ImageBackgroundShape } from '../Relato/style';
 
 Yup.setLocale(pt);
 
@@ -56,9 +55,7 @@ export default function ScreenSugestao() {
             <TextFonte>Escreva sua sugestão para prefeitura</TextFonte>
             <TextFieldCampo placeholder="Campo de texto" />
             <LogButtonEnvio>
-              <ImageBackgroundShape source={require('../../../imagens/ButtonColors.png')}>
-                <TextEnvio>Enviar</TextEnvio>
-              </ImageBackgroundShape>
+              <TextEnvio>Enviar</TextEnvio>
             </LogButtonEnvio>
           </Container>
         </ViewContainerSugestao>

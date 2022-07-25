@@ -28,8 +28,8 @@ export const TextFieldCampo = styled.TextInput`
 `;
 
 export const LogButtonEnvio = styled.TouchableOpacity`
-  background-color: #e5e5e5;
-  width: 200px;
+  background-color: blue;
+  width: 100px;
   height: 40px;
   border-radius: 28px;
   justify-content: center;
@@ -37,16 +37,6 @@ export const LogButtonEnvio = styled.TouchableOpacity`
   margin-top: 30px;
   margin-left: 70px;
   margin-bottom: 40px;
-`;
-
-export const ImageBackgroundShape = styled.ImageBackground`
-  display: flex;
-  border-radius: 28px;
-  /* width: 255px; */
-  width: 200px;
-  background-color: blue;
-  height: 38px;
-  justify-content: center;
 `;
 
 export const TextEnvio = styled.Text`
