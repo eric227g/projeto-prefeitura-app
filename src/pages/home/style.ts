@@ -30,30 +30,37 @@ export const HeaderContainer = styled.View`
 `;
 
 export const Manut_Vias = styled.TouchableOpacity`
+  display: flex;
   margin-left: 10%;
   margin-top: 5%;
 `;
 export const Manut_Parque = styled.TouchableOpacity`
+  display: flex;
   margin-left: 65%;
   margin-top: -31%;
 `;
 export const Energia = styled.TouchableOpacity`
+  display: flex;
   margin-left: 10%;
   margin-top: 5%;
 `;
 export const Anvisa = styled.TouchableOpacity`
+  display: flex;
   margin-left: 65%;
   margin-top: -28%;
 `;
 export const Ideia = styled.TouchableOpacity`
+  display: flex;
   margin-left: 65%;
   margin-top: -30%;
 `;
 export const Water = styled.TouchableOpacity`
+  display: flex;
   margin-left: 10%;
   margin-top: 5%;
 `;
 export const Sugestao = styled.Text`
+  display: flex;
   margin-left: 15px;
   font-size: 15px;
   font-weight: 700;
@@ -77,10 +84,11 @@ export const ImageLogo = styled.Image`
   height: 143px;
 `;
 export const ViewContainer = styled.View`
+  display: flex;
+  margin-bottom: 30px;
   flex: 1;
   /* padding-horizontal: 20; */
-  justify-content: 'center';
-  align-items: 'center';
+  justify-content: space-between;
 `;
 
 export default styled;

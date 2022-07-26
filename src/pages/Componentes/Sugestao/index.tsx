@@ -6,6 +6,7 @@ import {
   TextFieldCampo,
   RatingStar,
   ViewContainerSugestao,
+  ViewHead,
 } from './style';
 import { Rating } from 'react-native-ratings';
 import { Header } from 'pages/header';
@@ -25,9 +26,9 @@ export default function ScreenSugestao() {
   return (
     <>
       <ScrollView>
-        <View>
-          <Header report="Escreva seu relato" />
-        </View>
+        <ViewHead>
+          <Header report="Escreva sua Sugestão" />
+        </ViewHead>
         <ViewContainerSugestao>
           <Container>
             <TextFonte>Avaliação do aplicativo</TextFonte>
