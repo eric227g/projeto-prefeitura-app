@@ -17,7 +17,8 @@ export const LogButtonFoto = styled.TouchableOpacity`
 
 export const LogButtonEnvio = styled.TouchableOpacity`
   background-color: blue;
-  width: 100px;
+  width: 50%;
+  max-width: 400px;
   height: 40px;
   border-radius: 28px;
   display: flex;

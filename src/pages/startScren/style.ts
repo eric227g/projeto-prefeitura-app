@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 
 export const ImageTeste = styled.Image`
   width: 100%;
+  max-width: 600px;
   height: 600px;
   position: absolute;
 `

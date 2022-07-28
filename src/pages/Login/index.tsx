@@ -12,7 +12,7 @@ export default () => (
   <>
     <ImageDetails source={require('../../imagens/balls.png')} />
     <Image
-      source={require('../../imagens/logo.png')}
+      source={require('../../imagens/logoteste.png')}
       style={{position: 'absolute', height: '150px', width: '150px'}} />
     <Letreiro>Cidadão Informa</Letreiro>
     <SignInSign>Entrar</SignInSign>

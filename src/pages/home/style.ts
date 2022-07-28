@@ -2,8 +2,8 @@ import styled from 'styled-components/native';
 
 export const Info = styled.Text`
   color: white;
-  margin-left: 38%;
-  margin-top: -30%;
+  margin-left: 38px;
+  margin-top: -30px;
   font-size: 24px;
   font-weight: 600;
   width: 200px;
@@ -12,8 +12,8 @@ export const Info = styled.Text`
 `;
 export const Walcome = styled.Text`
   color: white;
-  margin-left: 36%;
-  margin-top: 5%;
+  margin-left: 36px;
+  margin-top: 5px;
   font-size: 24px;
   font-weight: 600;
   width: 200px;
@@ -22,8 +22,8 @@ export const Walcome = styled.Text`
 `;
 export const Report = styled.Text`
   color: white;
-  margin-left: 25%;
-  margin-top: 12%;
+  margin-left: 25px;
+  margin-top: 12px;
   font-size: 24px;
   font-weight: 600;
   width: 200px;
