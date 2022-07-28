@@ -60,13 +60,24 @@ export const Container = styled.View`
   display: flex;
   margin-top: 10%;
   padding-left: 26px;
+  justify-content: 'center';
+  justify-content: space-between;
+  align-items: 'center';
+`;
+
+export const ViewHead = styled.View`
+  display: flex;
+  margin-bottom: 120px;
 `;
 
 export const ViewContainer = styled.View`
+  display: flex;
   flex: 1;
   /* paddinghorizontal: 20; */
   justify-content: 'center';
+  justify-content: space-between;
   align-items: 'center';
+  margin-top: 120px;
 `;
 
 export default styled;
