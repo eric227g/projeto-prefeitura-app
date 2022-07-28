@@ -45,13 +45,16 @@ export const TextEnvio = styled.Text`
   justify-content: center;
   text-align: center;
 `;
+export const ViewHead = styled.View`
+  display: flex;
+`;
 
 export const ViewContainerSugestao = styled.View`
-  margin-top: 50px;
+  display: flex;
   flex: 1;
-  /* padding-horizontal: 20; */
   justify-content: 'center';
-  align-items: 'center';
+  max-width: 100%;
+  margin-top: 120px;
 `;
 
 export default styled;
