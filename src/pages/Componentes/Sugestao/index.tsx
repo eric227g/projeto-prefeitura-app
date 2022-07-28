@@ -11,7 +11,6 @@ import {
 import { Rating } from 'react-native-ratings';
 import { Header } from 'pages/header';
 import { ScrollView, View } from 'react-native';
-import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { pt } from 'yup-locale-pt';
 

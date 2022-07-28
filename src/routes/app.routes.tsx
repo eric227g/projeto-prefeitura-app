@@ -13,8 +13,6 @@ const AppRoutes: FC<PropsGroup> = function ({ Drawer }: PropsGroup) {
     <Drawer.Group>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Perfil" component={Profile} />
-      <Drawer.Screen name="Registro" component={Registration} />
-      <Drawer.Screen name="Mascara" component={TelaMascara} />
       <Drawer.Screen
         name="ScreenRelato"
         component={ScreenRelato}
