@@ -15,7 +15,7 @@ const AppRoutes: FC<PropsGroup> = function ({ Drawer }: PropsGroup) {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Perfil" component={Profile} />
       <Drawer.Screen name="Registro" component={Registration} />
-      <Drawer.Screen name="Sign in" component={Register} />
+      <Drawer.Screen name="Register" component={Register} />
       <Drawer.Screen name="Login" component={Login} />
       <Drawer.Screen
       name="Tela Inicial"

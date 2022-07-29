@@ -5,9 +5,10 @@ import { useNavigation } from "@react-navigation/core";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "routes/types";
 
-// const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
 export default function StartScren () {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return(
     <>
       <View>
@@ -19,13 +20,17 @@ export default function StartScren () {
         <Title>Cidadão informa</Title>
       </View>
       <View>
-        <ButtonEntrar>
+        <ButtonEntrar
+        onPress={() => navigation.navigate('Login')}
+        >
           <TextEntrar >Entrar </TextEntrar>
           <Icon>
             <ArrowRight size={25} color={'#ffffff'} />
           </Icon>
         </ButtonEntrar>
-        <ButtonCadastrar>
+        <ButtonCadastrar
+        onPress={() => navigation.navigate('Register')}
+        >
           <TextCadastrar>Cadastrar </TextCadastrar>
           <Icon>
             <ArrowRight size={25} color={'#7693ff'} />
