@@ -1,36 +1,15 @@
-import { createContext, useContext, useMemo } from 'react';
-import useLogic from './logic';
-import { Props, IdiomaContextData } from './types';
+import { IdiomaProvider } from './Translate/index'
 
-const IdiomaContext = createContext<IdiomaContextData>({} as IdiomaContextData);
-
-function IdiomaProvider({ children }: Props) {
-  const {
-    portugues,
-    setPortugues,
-} = useLogic();
-
-
-  const contextValue = useMemo(
-    () => ({
-      portugues,
-      setPortugues,
-    }),[portugues, setPortugues],
-);
-
-    return <IdiomaContext.Provider value={contextValue}>
-      {children}
-      </IdiomaContext.Provider>;
+interface Props {
+  children: React.ReactNode;
 }
 
-function useIdioma() {
-    const context = useContext(IdiomaContext);
-
-    if (!context) {
-        throw new Error('useIdioma must be used within an IdiomaProvider');
-    }
-
-    return context;
+function AppProvider({ children }: Props) {
+  return (
+      <IdiomaProvider>
+        {children}
+      </IdiomaProvider>
+  );
 }
 
-export { IdiomaProvider, useIdioma };
+export default AppProvider;

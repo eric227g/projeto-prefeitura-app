@@ -4,7 +4,8 @@ export interface Props {
 }
 
 export interface IdiomaContextData {
-    portugues: string;
-    setPortugues: (value: string) => void;
+    language: string;
+    setlanguage: (value: string) => void;
+    i18n: typeof i18n
 }
 

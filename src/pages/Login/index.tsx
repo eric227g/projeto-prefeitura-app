@@ -2,14 +2,18 @@ import { View, Text, Image } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Input, ImageDetails, BtnLogIn, DivInputs, SignInSign, Letreiro, TxtButton } from './style';
+import { IdiomaProvider, useIdioma } from 'hooks/Translate';
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email().required(),
   password: Yup.string().required(),
 });
 
-export default () => (
-  <>
+export default function Login() {
+  const { i18n } = useIdioma()
+
+  return (
+<>
     <ImageDetails source={require('../../imagens/balls.png')} />
     <Image
       source={require('../../imagens/logoteste.png')}
@@ -24,7 +28,7 @@ export default () => (
       {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
         <View>
           <DivInputs>
-            <Text style={{ color: '#B9B9B9' }}>Endereço de email</Text>
+            <Text style={{ color: '#B9B9B9' }}>{i18n.t('email_address')}</Text>
             <Input
               onChangeText={handleChange('email')}
               onBlur={handleBlur('email')}
@@ -49,4 +53,5 @@ export default () => (
       )}
     </Formik>
   </>
-);
+  )
+}

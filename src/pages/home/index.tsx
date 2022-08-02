@@ -3,6 +3,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Header } from 'pages/header';
 import { View, Image } from 'react-native';
 import { RootStackParamList } from 'routes/types';
+import { useIdioma } from '../../hooks/Translate';
 import {
   Manut_Vias,
   Manut_Parque,
@@ -19,6 +20,7 @@ import {
 } from './style';
 
 export default function Home() {
+
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   return (
     <>
