@@ -4,6 +4,7 @@ export const ViewImage = styled.View`
 display: flex;
 align-items: center;
 justify-content: center;
+
 `
 
 export const Container = styled.Text`

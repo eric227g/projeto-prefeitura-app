@@ -9,12 +9,10 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Icon } from 'pages/profile/styles';
 import { CheckCircle } from 'phosphor-react-native';
-import  { db } from '../../config/index';
-import { collection } from 'firebase/firestore';
 
 
 
-export default async function Registration(){
+export default function Registration(){
   const SignupSchema = Yup.object().shape({
     email: Yup.string().email().required("este é um campo obrigatorio"),
     password: Yup.string().required("este campo é obrigatorio"),
@@ -23,9 +21,6 @@ export default async function Registration(){
     second_name: Yup.string().required("este é um campo obrigatorio"),
     date_birth: Yup.string().required("este é um campo obrigatorio"),
   });
-
-  const _collection = collection(db, 'Usuario')
-  console.log(_collection)
 
 
   return(
