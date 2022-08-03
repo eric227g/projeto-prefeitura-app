@@ -17,7 +17,7 @@ export const BtnLogIn = styled.TouchableOpacity`
 `;
 
 export const DivInputs = styled.View`
-    top: 200px;
+    top: 100px;
     justify-content: center;
     align-items: center;
 `;
@@ -31,7 +31,7 @@ export const SignInSign = styled.Text`
 
 export const Letreiro = styled.Text`
     position: absolute;
-    top: 135px;
+    top: 143px;
     padding-left: 15px;
     font-size: 35px;
     text-align-last: center;
@@ -61,3 +61,4 @@ export const Input = styled.TextInput<IColor>`
         background-color: rgb(254, 205, 205);`
     }
 `;
+
