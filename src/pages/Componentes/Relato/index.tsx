@@ -11,8 +11,16 @@ import {
 } from './style';
 import { TextInput, Text, View, StyleSheet, ImageBackground, Image, ScrollView } from 'react-native';
 import { Header } from 'pages/header';
+import { getDatabase, ref, onValue, set } from 'firebase/database';
+
+// function StoreDataScreenRelato(endereço, descricao, foto) {
+//   const db = getDatabase();
+//   const reference = ref(db, 'users/' + endereco);
+// }
 
 export default function ScreenRelato() {
+  // const SendRelatoToFirebase = () => StoreDataScreenRelato;
+
   return (
     <>
       <ScrollView>
@@ -38,19 +46,3 @@ export default function ScreenRelato() {
     </>
   );
 }
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     paddingHorizontal: 20,
-//     justifyContent: 'center',
-//     // alignItems: 'center',
-//   },
-//   subContainer: {
-//     flex: 0.5,
-//   },
-//   box: {
-//     width: 100,
-//     height: 100,
-//     backgroundColor: '#ff066',
-//   },
-// });

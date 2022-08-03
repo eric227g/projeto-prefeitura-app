@@ -27,7 +27,10 @@ export const Report = styled.Text`
   font-size: 24px;
   font-weight: 600;
   width: 240px;
-  height: 50px;
+  height: 60px;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  justify-content: center;
   flex: 1;
 `;
 export const HeaderContainer = styled.View`
@@ -43,7 +46,7 @@ export const HeaderContainer = styled.View`
 
 export const Manut_Vias = styled.TouchableOpacity`
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -55,7 +58,7 @@ export const Manut_Parque = styled.TouchableOpacity`
 `;
 export const Energia = styled.TouchableOpacity`
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -73,7 +76,7 @@ export const Ideia = styled.TouchableOpacity`
 `;
 export const Water = styled.TouchableOpacity`
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   margin-top: 20px;
   margin-bottom: 20px;
 `;
@@ -112,6 +115,6 @@ export const ViewButtons = styled.View`
   max-width: 600px;
   margin-left: 55px;
   padding-right: 100px;
-`
+`;
 
 export default styled;

@@ -67,7 +67,7 @@ export const Container = styled.View`
 
 export const ViewHead = styled.View`
   display: flex;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 `;
 
 export const ViewContainer = styled.View`
@@ -77,7 +77,7 @@ export const ViewContainer = styled.View`
   justify-content: 'center';
   justify-content: space-between;
   align-items: 'center';
-  margin-top: 120px;
+  margin-top: 90px;
 `;
 
 export default styled;
