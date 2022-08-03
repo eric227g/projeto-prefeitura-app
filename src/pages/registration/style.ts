@@ -1,15 +1,21 @@
 import styled  from "styled-components/native";
 
+export const ViewImage = styled.View`
+display: flex;
+align-items: center;
+justify-content: center;
+
+`
+
 export const Container = styled.Text`
-  height: 100%;
   background-color: #2b47fc;
+  height: 1500px;
 `
 export const CBlue = styled.Text`
   width: 104px;
   height: 104px;
   border-radius: 36px;
   background-color: #40CEF2;
-  margin-left: 150px;
   margin-top: -105px;
   transform: rotate(-30deg);
 `
@@ -18,7 +24,6 @@ export const CPurple = styled.View`
   height: 108px;
   border-radius: 36px;
   background-color: #B52FF8;
-  margin-left: 150px;
   margin-top: 30px;
   transform: rotate(-57deg);
 `
@@ -27,7 +32,6 @@ export const CWhite = styled.View`
   height: 104px;
   border-radius: 36px;
   background-color: #f6f6f6;
-  margin-left: 150px;
   margin-top: -105px;
 `
 export const Info = styled.Text`
@@ -47,18 +51,23 @@ export const User = styled.TextInput`
   border-Bottom-Width: 1px;
 `
 export const RegisterButton = styled.TouchableOpacity`
-margin-top: 75px;
-margin-bottom: 25px;
-margin-left: 30px;
-width: 315px;
-height: 72px;
-background-color: #3A1B8A;
-border-radius: 28px;
-display: flex;
-align-items: center;
-justify-content: center;
+  border: 1px solid #FFFF;
+  width: 315px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  border-radius: 28px;
+  padding-left: 25px ;
+  border-color: #FFFF;
+  margin-bottom: 50px;
 `
 export const TextRegisterButton = styled.Text`
-font-size: 32px;
-color: #C8C8C8;
+  font-size: 24px;
+  color: #FFFF;
+`
+export const ViewFormik = styled.View`
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
 `

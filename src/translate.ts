@@ -7,15 +7,19 @@ import * as ja from 'yup-locale-ja';
 i18n.translations = {
   'pt-BR': {
     email: 'email',
-    senha: 'senha',
+    password: 'senha',
+    email_address: 'endereço de email'
   },
   'en-US': {
     email: 'email',
-    senha: 'password',
+    password: 'password',
+    email_address: 'email address'
   },
   ja: {
     email: 'Eメール',
-    senha: 'パスワード',
+    password: 'パスワード',
+    email_address: '電子メールアドレス'
+
   },
 };
 
