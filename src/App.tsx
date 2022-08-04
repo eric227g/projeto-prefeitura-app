@@ -8,7 +8,7 @@ ServiceWorkerRegistration.register();
 const App: FC = function () {
   return(
     <AppProvider>
-      <Routes />;
+      <Routes />
     </AppProvider>
   )
 };
