@@ -55,10 +55,11 @@ export const Input = styled.TextInput<IColor>`
     border-color: rgb(34, 63, 253);
     font-size: 19px;
     border-Bottom-Width: 1px;
+    padding: 4px;
     ${props => !props.isValid && css`
-        border-color: rgb(255, 81, 81);
-        font-weight: bold;
-        background-color: rgb(254, 205, 205);`
+        border: 1px solid red;
+        font-weight: bold;`
     }
 `;
+
 

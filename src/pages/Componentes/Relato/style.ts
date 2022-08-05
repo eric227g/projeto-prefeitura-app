@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css } from 'styled-components/native';
 
 export const LogButtonFoto = styled.TouchableOpacity`
@@ -6,7 +5,6 @@ export const LogButtonFoto = styled.TouchableOpacity`
   width: 75px;
   height: 40px;
   border-radius: 10px;
-  /* background: linear-gradient(98.88deg, #4960f9 -14.33%, #1433ff 92.04%); */
   border-radius: 28px;
   display: flex;
   align-items: center;
@@ -24,7 +22,6 @@ export const LogButtonEnvio = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 70px;
 `;
 
 export const TextInputAdress = styled.TextInput`
@@ -65,19 +62,34 @@ export const Container = styled.View`
   align-items: 'center';
 `;
 
-export const ViewHead = styled.View`
-  display: flex;
-  margin-bottom: 100px;
-`;
 
 export const ViewContainer = styled.View`
   display: flex;
-  flex: 1;
-  /* paddinghorizontal: 20; */
-  justify-content: 'center';
-  justify-content: space-between;
-  align-items: 'center';
-  margin-top: 90px;
+  width: 80%;
+  max-width: 500px;
+  align-items: center;
+`;
+export const ViewTop = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+`;
+
+interface IColor {
+  isValid: boolean;
+};
+export const Input = styled.TextInput<IColor>`
+    width: 80%;
+    height: 25px;
+    border-color: rgb(34, 63, 253);
+    font-size: 15px;
+    border-Bottom-Width: 1px;
+    padding: 4px;
+    ${props => !props.isValid && css`
+        border: 1px solid red;
+        font-weight: bold;`
+    }
 `;
 
 export default styled;

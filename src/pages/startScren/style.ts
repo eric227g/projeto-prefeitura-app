@@ -1,6 +1,14 @@
 import styled from "styled-components/native";
 
-export const ImageTeste = styled.Image`
+
+export const Container = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const ImageShapes = styled.Image`
   width: 100%;
   max-width: 600px;
   height: 600px;
@@ -13,7 +21,8 @@ export const Logo = styled.Image`
 `
 
 export const ButtonEntrar = styled.TouchableOpacity`
-  width: 350px;
+  width: 80%;
+  max-width: 500px;
   height: 72px;
   border-radius: 20px;
   background-color: blue;
@@ -30,7 +39,8 @@ export const TextEntrar = styled.Text`
   font-weight: 400;
 `
 export const ButtonCadastrar = styled.TouchableOpacity`
-  width: 350px;
+  width: 80%;
+  max-width: 500px;
   height: 72px;
   border-radius: 20px;
   border: 1px solid blue;

@@ -45,10 +45,11 @@ export const User = styled.TextInput<IColor>`
   max-width: 500px;
   border-Bottom-Color: #A6A6A6;
   border-Bottom-Width: 1px;
+  padding: 4px;
   ${props => !props.isValid && css`
-        border-color: rgb(255, 81, 81);
-        font-weight: bold;
-        background-color: rgb(254, 205, 205);`
+        border: 1px solid red;
+        border-bottom-color: red;
+`
     }
 `
 export const Info = styled.Text`
@@ -71,6 +72,7 @@ export const Button = styled.TouchableOpacity`
   border-radius: 28px;
   padding-left: 25px ;
   border-color: #465EFF;
+  margin-bottom: 50px;
 `
 export const Sair = styled.Text `
   font-size: 24px;

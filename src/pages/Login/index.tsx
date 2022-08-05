@@ -2,11 +2,11 @@ import { View, Text, Image } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Input, ImageDetails, BtnLogIn, DivInputs, SignInSign, Letreiro, TxtButton } from './style';
-import { IdiomaProvider, useIdioma } from 'hooks/Translate';
+import {  useIdioma } from 'hooks/Translate';
 
 const SignupSchema = Yup.object().shape({
-  email: Yup.string().email().required(),
-  password: Yup.string().required(),
+  email: Yup.string().email().required("este é um campo obrigatorio"),
+  password: Yup.string().required("este é um campo obrigatorio"),
 });
 
 export default function Login() {

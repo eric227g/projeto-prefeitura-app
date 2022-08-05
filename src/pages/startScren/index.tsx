@@ -1,5 +1,5 @@
 import { View, Image, Text } from "react-native"
-import { ImageTeste, Logo, ButtonEntrar, TextEntrar, ButtonCadastrar, TextCadastrar, Icon,Title } from './style'
+import { ImageShapes, Logo, ButtonEntrar, TextEntrar, ButtonCadastrar, TextCadastrar, Icon,Title, Container } from './style'
 import { ArrowRight } from 'phosphor-react-native'
 import { useNavigation } from "@react-navigation/core";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -12,14 +12,14 @@ export default function StartScren () {
   return(
     <>
       <View>
-        <ImageTeste source={require('../../imagens/Shapes.png')} />
+        <ImageShapes source={require('../../imagens/Shapes_atualizado.png')} />
         <Logo source={require('../../imagens/logoteste.png')} />
 
       </View>
       <View>
         <Title>Cidadão informa</Title>
       </View>
-      <View>
+      <Container>
         <ButtonEntrar
         onPress={() => navigation.navigate('Login')}
         >
@@ -29,14 +29,14 @@ export default function StartScren () {
           </Icon>
         </ButtonEntrar>
         <ButtonCadastrar
-        onPress={() => navigation.navigate('Register')}
+        onPress={() => navigation.navigate('Registro')}
         >
           <TextCadastrar>Cadastrar </TextCadastrar>
           <Icon>
             <ArrowRight size={25} color={'#7693ff'} />
           </Icon>
         </ButtonCadastrar>
-      </View>
+      </Container>
     </>
   )
 }
