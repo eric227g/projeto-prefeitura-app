@@ -1,25 +1,46 @@
 import { View, Image, Text } from "react-native"
-import { ImageTeste, Logo, ButtonEntrar, TextEntrar, ButtonCadastrar, TextCadastrar, Icon,Title } from './style'
+import { ImageShapes, Logo, ButtonEntrar, TextEntrar, ButtonCadastrar, TextCadastrar, Icon,Title, Container } from './style'
 import { ArrowRight } from 'phosphor-react-native'
 import { useNavigation } from "@react-navigation/core";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "routes/types";
+import { useAuth } from "hooks/auth";
+import { useEffect, useState } from "react";
 
 
 export default function StartScren () {
+  const [ Screen, setScreen ] = useState(true)
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
+  const { isUserDataPresent, user } = useAuth()
+  console.log(isUserDataPresent, user)
+  useEffect(() => {
+    if (isUserDataPresent === true) {
+      if(user !== null) {
+        navigation.navigate('Home')
+      } else {
+        console.log("nao logou");
+        setScreen(false);
+      }
+    }
+
+  },[isUserDataPresent, user])
+
+  if (!isUserDataPresent || Screen) {
+    return <View><Text>Carregando</Text></View>
+  }
+  console.log('passou');
 
   return(
     <>
       <View>
-        <ImageTeste source={require('../../imagens/Shapes.png')} />
-        <Logo source={require('../../imagens/logoteste.png')} />
+        <ImageShapes source={require('../../imagens/Shapes_atualizado.png')} />
 
+      <Logo
+        source={require('../../imagens/Logo_CidadaoInforma2.png')}
+      />
       </View>
-      <View>
-        <Title>Cidadão informa</Title>
-      </View>
-      <View>
+      <Container>
         <ButtonEntrar
         onPress={() => navigation.navigate('Login')}
         >
@@ -29,14 +50,14 @@ export default function StartScren () {
           </Icon>
         </ButtonEntrar>
         <ButtonCadastrar
-        onPress={() => navigation.navigate('Register')}
+        onPress={() => navigation.navigate('Registro')}
         >
           <TextCadastrar>Cadastrar </TextCadastrar>
           <Icon>
             <ArrowRight size={25} color={'#7693ff'} />
           </Icon>
         </ButtonCadastrar>
-      </View>
+      </Container>
     </>
   )
 }

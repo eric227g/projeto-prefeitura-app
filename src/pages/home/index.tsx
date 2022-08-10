@@ -31,7 +31,7 @@ export default function Home() {
       <ViewButtons>
         <Manut_Vias onPress={() => navigation.navigate('ScreenRelato')}>
           <ImageHome source={require('../../imagens/buraco.png')} />
-          <StyleText>Manut. em Vias</StyleText>
+          <StyleTextLeft>Manut. em Vias</StyleTextLeft>
         </Manut_Vias>
 
         <Manut_Parque onPress={() => navigation.navigate('ScreenRelato')}>

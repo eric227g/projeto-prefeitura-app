@@ -1,3 +1,4 @@
+import { AuthProvider } from './auth';
 import { IdiomaProvider } from './Translate/index'
 
 interface Props {
@@ -6,9 +7,13 @@ interface Props {
 
 function AppProvider({ children }: Props) {
   return (
-      <IdiomaProvider>
-        {children}
-      </IdiomaProvider>
+    <>
+      <AuthProvider>
+        <IdiomaProvider>
+          {children}
+        </IdiomaProvider>
+      </AuthProvider>
+    </>
   );
 }
 

@@ -27,7 +27,7 @@ export type AppStackParamList = {
   ScreenRelato: undefined;
   SugestaoScreen: undefined;
   Login: undefined;
-  Register: undefined;
+  Registro: undefined;
 };
 
 export type RootStackParamList = AppStackParamList;

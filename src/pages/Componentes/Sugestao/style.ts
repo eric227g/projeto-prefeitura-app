@@ -2,11 +2,6 @@ import styled, { css } from 'styled-components/native';
 
 export const RatingStar = styled.Text`
   display: flex;
-  color: #3498db;
-  background-color: transparent;
-  margin-left: 12px;
-  text-align: left;
-  max-width: 900px;
   max-height: 900px;
 `;
 
@@ -18,24 +13,22 @@ export const TextFonte = styled.Text`
   margin-bottom: 10px;
 `;
 
-// export const Container = styled.View`
-//   display: flex;
-//   margin-top: 250px;
-//   padding-left: 26px;
-//   justify-content: center;
-//   justify-content: space-between;
-//   max-width: 900px;
-//   max-height: 900px;
-// `;
+export const Container = styled.View`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+  align-items: center;
+`;
 
 export const TextFieldCampo = styled.TextInput`
-  display: flex;
-  width: 350px;
-  height: 200px;
-  background-color: #e5e5e5;
-  max-width: 900px;
-  max-height: 900px;
-  justify-content: center;
+  width: 80%;
+  max-width: 500px;
+  height: 25px;
+  border-color: rgb(34, 63, 253);
+  font-size: 19px;
+  border-Bottom-Width: 1px;
+  padding: 4px;
 `;
 
 export const LogButtonEnvio = styled.TouchableOpacity`
