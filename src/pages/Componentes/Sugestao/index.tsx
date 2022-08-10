@@ -15,6 +15,7 @@ import * as Yup from 'yup';
 import { pt } from 'yup-locale-pt';
 import { Formik } from 'formik';
 import { Input } from 'pages/Login/style';
+import { useState } from 'react';
 
 Yup.setLocale(pt);
 
@@ -22,6 +23,7 @@ const SignupSchema = Yup.object().shape({
   sugestaoUser: Yup.string()
 });
 export default function Sugestao() {
+
   return (
     <>
       <ScrollView>

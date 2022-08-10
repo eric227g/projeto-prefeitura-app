@@ -25,7 +25,7 @@ i18n.translations = {
 
 // i18n.locale = Localization.locale;
 
-i18n.locale = 'ja';
+i18n.locale = 'pt-BR';
 
 function Idioma() {
   switch (i18n.locale) {

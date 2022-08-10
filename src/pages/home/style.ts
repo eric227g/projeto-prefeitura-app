@@ -109,9 +109,7 @@ export const ImageHome = styled.Image`
   height: 100px;
 `;
 export const ImageLogo = styled.Image`
-  width: 155px;
-  height: 143px;
-  position: absolute;
+position: absolute;
 `;
 export const ViewContainer = styled.View`
   display: flex;

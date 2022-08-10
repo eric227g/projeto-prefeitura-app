@@ -7,10 +7,12 @@ import {
   ViewTop,
   Input
 } from './style';
-import { Text, ScrollView, View } from 'react-native';
+import { Text, ScrollView, View, Button, Image } from 'react-native';
 import { Header } from 'pages/header';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from 'react';
 
 
 export default function ScreenRelato() {
@@ -19,12 +21,29 @@ export default function ScreenRelato() {
     bairro: Yup.string().required("este é um campo obrigatorio"),
     descrição: Yup.string().required("este é um campo obrigatorio"),
   });
+  const [ image, setImage ] = useState< string | null >(null)
+
+  const pickImage = async () => {
+
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.cancelled) {
+      setImage(result.uri);
+    }
+  };
   return (
     <>
       <ScrollView>
-          <Header report="Escreva seu Relato" />
+        <Header report="Escreva seu Relato" />
         <Formik
-          initialValues={{ rua: '', bairro: '', descrição:'' }}
+          initialValues={{ rua: '', bairro: '', descrição: '' }}
           onSubmit={values => alert(JSON.stringify(values, null, 2))}
           validationSchema={SignupSchema}
         >
@@ -57,10 +76,12 @@ export default function ScreenRelato() {
                   isValid={!(errors.descrição && touched.descrição)}
                 />
                 {errors.descrição && touched.descrição ? <Text>{errors.descrição}</Text> : null}
-                <LogButtonFoto>
-                  <TextFoto>Carregar foto</TextFoto>
-                </LogButtonFoto>
-                <LogButtonEnvio>
+
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                  <Button title="envie uma foto" onPress={pickImage} />
+                  {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+                </View>
+                <LogButtonEnvio onPress={() => handleSubmit()}>
                   <TextEnviar>Enviar</TextEnviar>
                 </LogButtonEnvio>
               </ViewContainer>

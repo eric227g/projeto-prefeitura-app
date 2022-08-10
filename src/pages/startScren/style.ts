@@ -16,8 +16,8 @@ export const ImageShapes = styled.Image`
 `
 
 export const Logo = styled.Image`
-  width: 155px;
-  height: 143px;
+  width: 250px;
+  height: 250px;
 `
 
 export const ButtonEntrar = styled.TouchableOpacity`
