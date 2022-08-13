@@ -6,14 +6,17 @@ export const ImageDetails = styled.Image`
 `;
 
 export const BtnLogIn = styled.TouchableOpacity`
-    width: 300px;
+    width: 50%;
+    max-width: 500px;
     height: 53px;
-    left: 0%;
-    top: 10px;
     background-color: rgb(34, 63, 253);
     border-radius: 23px;
     border: 1px solid rgb(34, 63, 253);
     padding-bottom: 5px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const DivInputs = styled.View`
@@ -42,7 +45,7 @@ export const Letreiro = styled.Text`
 export const TxtButton = styled.Text`
     color: white;
     text-align: left;
-    padding: 15px;
+    font-size: 25px;
 `;
 
 interface IColor {
@@ -50,12 +53,14 @@ interface IColor {
 };
 
 export const Input = styled.TextInput<IColor>`
-    width: 200px;
+    width: 80%;
+    max-width: 500px;
     height: 25px;
     border-color: rgb(34, 63, 253);
     font-size: 19px;
     border-Bottom-Width: 1px;
     padding: 4px;
+    margin-top: 10px;
     ${props => !props.isValid && css`
         border: 1px solid red;
         font-weight: bold;`

@@ -21,7 +21,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "downlevelIteration": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "strictPropertyInitialization": false
   },
   "include": [
     "src"

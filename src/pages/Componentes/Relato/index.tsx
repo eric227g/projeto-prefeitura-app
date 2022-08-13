@@ -13,13 +13,14 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
+import  CreateRelatoController  from '../../../controller/createRelato';
 
 
 export default function ScreenRelato() {
   const SignupSchema = Yup.object().shape({
     rua: Yup.string().required("este é um campo obrigatorio"),
     bairro: Yup.string().required("este é um campo obrigatorio"),
-    descrição: Yup.string().required("este é um campo obrigatorio"),
+    descricao: Yup.string().required("este é um campo obrigatorio"),
   });
   const [ image, setImage ] = useState< string | null >(null)
 
@@ -38,19 +39,21 @@ export default function ScreenRelato() {
       setImage(result.uri);
     }
   };
+  const create = new CreateRelatoController()
+
   return (
     <>
       <ScrollView>
         <Header report="Escreva seu Relato" />
         <Formik
-          initialValues={{ rua: '', bairro: '', descrição: '' }}
-          onSubmit={values => alert(JSON.stringify(values, null, 2))}
+          initialValues={{ rua: '', bairro: '', descricao: '' }}
+          onSubmit={values => create.execute(values).then(teste => console.log('funcionou'))}
           validationSchema={SignupSchema}
         >
-          {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
-            <ViewTop>
+          {({ handleChange, handleBlur, handleSubmit, values, errors, touched}) => (
+            <ViewTop >
               <ViewContainer>
-                <Text style={{ color: '#535252' }}>Endereço</Text>
+                <Text style={{ color: '#888888', fontSize:24 }}>Endereço:</Text>
                 <Input
                   placeholder='Rua/Avenida'
                   onChangeText={handleChange('rua')}
@@ -67,21 +70,20 @@ export default function ScreenRelato() {
                   isValid={!(errors.bairro && touched.bairro)}
                 />
                 {errors.bairro && touched.bairro ? <Text>{errors.bairro}</Text> : null}
-                <Text style={{ color: '#535252' }}>Descrição da situação atual</Text>
+                <Text style={{ color: '#888888', fontSize:20 }}>Descrição da situação atual:</Text>
                 <Input
-                  onChangeText={handleChange('descrição')}
-                  onBlur={handleBlur('descrição')}
-                  secureTextEntry={true}
-                  value={values.descrição}
-                  isValid={!(errors.descrição && touched.descrição)}
+                  onChangeText={handleChange('descricao')}
+                  onBlur={handleBlur('descricao')}
+                  value={values.descricao}
+                  isValid={!(errors.descricao && touched.descricao)}
                 />
-                {errors.descrição && touched.descrição ? <Text>{errors.descrição}</Text> : null}
+                {errors.descricao && touched.descricao ? <Text>{errors.descricao}</Text> : null}
 
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop:'24px' }}>
                   <Button title="envie uma foto" onPress={pickImage} />
                   {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
                 </View>
-                <LogButtonEnvio onPress={() => handleSubmit()}>
+                <LogButtonEnvio type='submit' onPress={() => handleSubmit()}>
                   <TextEnviar>Enviar</TextEnviar>
                 </LogButtonEnvio>
               </ViewContainer>

@@ -6,11 +6,11 @@ export const RatingStar = styled.Text`
 `;
 
 export const TextFonte = styled.Text`
-  display: flex;
-  font-size: 14px;
+  font-size: 20px;
   padding-left: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #888888;
 `;
 
 export const Container = styled.View`
@@ -22,7 +22,7 @@ export const Container = styled.View`
 `;
 
 export const TextFieldCampo = styled.TextInput`
-  width: 80%;
+  width: 95%;
   max-width: 500px;
   height: 25px;
   border-color: rgb(34, 63, 253);

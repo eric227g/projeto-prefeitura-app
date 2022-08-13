@@ -7,7 +7,7 @@ justify-content: center;
 
 `
 
-export const Container = styled.Text`
+export const Container = styled.View`
   background-color: #2b47fc;
   height: 1500px;
 `
@@ -42,13 +42,15 @@ export const ContainerBox = styled.View`
   margin-top: 50px;
 `
 export const User = styled.TextInput`
-  margin-left: 25px;
   margin-top: 12px;
   margin-bottom: 24px;
-  color: white;
-  width: 315px;
+  font-size: 24px;
+  color: black;
+  width: 80%;
+  max-width: 500px;
   border-Bottom-Color: #A6A6A6;
   border-Bottom-Width: 1px;
+  padding: 4px;
 `
 export const RegisterButton = styled.TouchableOpacity`
   border: 1px solid #FFFF;

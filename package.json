@@ -1,8 +1,10 @@
 {
-  "name": "my-app",
+  "name": "appcidadao",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "react:start": "react-native start",
+    "react:Android": "react-native run-android",
     "start": "expo start --dev-client",
     "android": "expo run:android",
     "ios": "expo run:ios",

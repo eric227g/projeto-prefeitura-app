@@ -61,7 +61,7 @@ export default function Sugestao() {
             >
               {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
                 <Container>
-                  <TextFonte>Escreva sua sugestão para prefeitura</TextFonte>
+                  <TextFonte>Escreva sua sugestão:</TextFonte>
                   <TextFieldCampo
                     onChangeText={handleChange('sugestaoUser')}
                     onBlur={handleBlur('sugestaoUser')}

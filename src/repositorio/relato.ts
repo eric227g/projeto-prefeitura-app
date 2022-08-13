@@ -1,6 +1,6 @@
-import { collection, doc } from 'firebase/firestore';
-import { db } from 'utils/firebase';
-import ModelRelato from 'model/ModelRelato';
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+import { db } from '../utils/firebase';
+import ModelRelato from '../model/ModelRelato';
 
 class RelatoRepositorio  {
   protected readonly _collection;
@@ -11,14 +11,15 @@ class RelatoRepositorio  {
 
 
   public async add(modelRelato: ModelRelato){
-    const newRelato = doc(db, 'Relatorio');
+    // const newRelato = doc(this._collection);
 
-    modelRelato.id = newRelato.id;
+    // modelRelato.id = newRelato.id;
+    // console.log(modelRelato.id)
 
     try {
-      await newRelato.set(modelRelato.toJSON());
+      await addDoc(collection(db, 'Relatorio'), modelRelato.toJSON())
 
-      return ModelRelato.id;
+      return modelRelato.id;
     } catch (erro) {
       console.log(erro)
     }

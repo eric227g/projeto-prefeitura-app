@@ -15,13 +15,14 @@ export const LogButtonFoto = styled.TouchableOpacity`
 
 export const LogButtonEnvio = styled.TouchableOpacity`
   background-color: blue;
-  width: 50%;
+  width: 60%;
   max-width: 400px;
   height: 40px;
   border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
 `;
 
 export const TextInputAdress = styled.TextInput`
@@ -80,12 +81,13 @@ interface IColor {
   isValid: boolean;
 };
 export const Input = styled.TextInput<IColor>`
-    width: 80%;
+    width: 90%;
     height: 25px;
     border-color: rgb(34, 63, 253);
     font-size: 15px;
     border-Bottom-Width: 1px;
     padding: 4px;
+    margin-top: 15px;
     ${props => !props.isValid && css`
         border: 1px solid red;
         font-weight: bold;`

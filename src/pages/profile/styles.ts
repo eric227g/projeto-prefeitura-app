@@ -34,10 +34,7 @@ export const Name = styled.Text`
   margin-top: 50px;
 `
 
-interface IColor {
-  isValid: boolean;
-};
-export const User = styled.TextInput<IColor>`
+export const User = styled.Text`
   margin-top: 12px;
   margin-bottom: 24px;
   color: #808080;
@@ -46,11 +43,6 @@ export const User = styled.TextInput<IColor>`
   border-Bottom-Color: #A6A6A6;
   border-Bottom-Width: 1px;
   padding: 4px;
-  ${props => !props.isValid && css`
-        border: 1px solid red;
-        border-bottom-color: red;
-`
-    }
 `
 export const Info = styled.Text`
   display: flex;
