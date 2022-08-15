@@ -5,7 +5,8 @@ import {
   LogButtonEnvio,
   ViewContainer,
   ViewTop,
-  Input
+  Input,
+  TextMensagem
 } from './style';
 import { Text, ScrollView, View, Button, Image } from 'react-native';
 import { Header } from 'pages/header';
@@ -23,6 +24,7 @@ export default function ScreenRelato() {
     descricao: Yup.string().required("este é um campo obrigatorio"),
   });
   const [ image, setImage ] = useState< string | null >(null)
+  const [ mensagem, setmensagem ] = useState('')
 
   const pickImage = async () => {
 
@@ -47,7 +49,7 @@ export default function ScreenRelato() {
         <Header report="Escreva seu Relato" />
         <Formik
           initialValues={{ rua: '', bairro: '', descricao: '' }}
-          onSubmit={values => create.execute(values).then(teste => console.log('funcionou'))}
+          onSubmit={values => create.execute(values).then(() => setmensagem('Relatado com sucesso!'))}
           validationSchema={SignupSchema}
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, touched}) => (
@@ -86,6 +88,7 @@ export default function ScreenRelato() {
                 <LogButtonEnvio type='submit' onPress={() => handleSubmit()}>
                   <TextEnviar>Enviar</TextEnviar>
                 </LogButtonEnvio>
+                <TextMensagem>{mensagem}</TextMensagem>
               </ViewContainer>
             </ViewTop>
           )}

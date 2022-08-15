@@ -29,32 +29,32 @@ export default function Home() {
     </View>
     <ViewContainer>
       <ViewButtons>
-        <Manut_Vias onPress={() => navigation.navigate('ScreenRelato')}>
+        <Manut_Vias onPress={() => navigation.navigate('Relato')}>
           <ImageHome source={require('../../imagens/buraco.png')} />
           <StyleTextLeft>Manut. em Vias</StyleTextLeft>
         </Manut_Vias>
 
-        <Manut_Parque onPress={() => navigation.navigate('ScreenRelato')}>
+        <Manut_Parque onPress={() => navigation.navigate('Relato')}>
           <ImageHome source={require('../../imagens/parque.png')} />
           <StyleText>Manut. em parques</StyleText>
         </Manut_Parque>
 
-        <Energia onPress={() => navigation.navigate('ScreenRelato')}>
+        <Energia onPress={() => navigation.navigate('Relato')}>
           <ImageHome source={require('../../imagens/energia.png')} />
           <StyleTextLeft>Falta de energia</StyleTextLeft>
         </Energia>
 
-        <Anvisa onPress={() => navigation.navigate('ScreenRelato')}>
+        <Anvisa onPress={() => navigation.navigate('Relato')}>
           <ImageHome source={require('../../imagens/Vigilancia.png')} />
           <StyleText>Vigilancia sanitaria</StyleText>
         </Anvisa>
 
-        <Water onPress={() => navigation.navigate('ScreenRelato')}>
+        <Water onPress={() => navigation.navigate('Relato')}>
           <ImageHome source={require('../../imagens/agua.png')} />
           <StyleTextLeft>Falta de água</StyleTextLeft>
         </Water>
 
-        <Ideia onPress={() => navigation.navigate('SugestaoScreen')}>
+        <Ideia onPress={() => navigation.navigate('Sugestão')}>
           <ImageHome source={require('../../imagens/ideia.png')} />
           <Sugestao>Sugestões</Sugestao>
         </Ideia>

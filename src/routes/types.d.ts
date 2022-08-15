@@ -24,8 +24,8 @@ export interface PropsGroupAuth extends PropsGroup {
 
 export type AppStackParamList = {
   Home: undefined;
-  ScreenRelato: undefined;
-  SugestaoScreen: undefined;
+  Relato: undefined;
+  Sugestão: undefined;
   Login: undefined;
   Registro: undefined;
 };

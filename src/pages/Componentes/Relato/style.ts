@@ -94,4 +94,16 @@ export const Input = styled.TextInput<IColor>`
     }
 `;
 
+export const TextMensagem = styled.Text`
+    color: green;
+    margin-top: 40px;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 340px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 export default styled;

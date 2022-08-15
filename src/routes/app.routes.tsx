@@ -25,24 +25,35 @@ const AppRoutes: FC<PropsGroup> = function ({ Drawer }: PropsGroup) {
           },
         }}
       />
-      <Drawer.Screen name="Login" component={Login} />
-      <Drawer.Screen name="Registro" component={Registration} />
+      <Drawer.Screen
+        name="Login"
+        component={Login}
+        options={{
+          drawerItemStyle: { height: 0 },
+        }} />
+      <Drawer.Screen
+        name="Registro"
+        component={Registration}
+        options={{
+          drawerItemStyle: { height: 0 },
+        }}
+      />
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Perfil" component={Profile} />
-        <Drawer.Screen
-          name="ScreenRelato"
-          component={ScreenRelato}
-          options={{
-            drawerItemStyle: { height: 0 },
-          }}
-        />
-        <Drawer.Screen
-          name="SugestaoScreen"
-          component={SugestaoScreen}
-          options={{
-            drawerItemStyle: { height: 0 },
-          }}
-        />
+      <Drawer.Screen
+        name="Relato"
+        component={ScreenRelato}
+        options={{
+          drawerItemStyle: { height: 0 },
+        }}
+      />
+      <Drawer.Screen
+        name="Sugestão"
+        component={SugestaoScreen}
+        options={{
+          drawerItemStyle: { height: 0 },
+        }}
+      />
     </Drawer.Group>
   );
 };
